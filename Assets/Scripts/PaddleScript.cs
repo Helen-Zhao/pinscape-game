@@ -2,24 +2,17 @@
 using System.Collections;
 using Assets.Scripts;
 using System;
-using Managers;
 
 public class PaddleScript : MonoBehaviour, IButtonPress {
 
 
     private HingeJoint2D hj;
-    private GameController _gameController;
-    private AudioSource _paddleAudio;
 
     public int HitPwr;
-    public AudioClip PaddleWhackClip;
 
     // Use this for initialization
     void Start () {
-        _gameController = GameController.Instance;
         hj = GetComponent<HingeJoint2D>();
-        _paddleAudio = GetComponent<AudioSource>();
-        _paddleAudio.clip = PaddleWhackClip;
     }
 
     protected void ActivateMotor() {
@@ -72,8 +65,6 @@ public class PaddleScript : MonoBehaviour, IButtonPress {
     }
 
     public bool Trigger() {
-        _paddleAudio.volume = _gameController.GetSFXVolume();
-        _paddleAudio.Play();
         this.SetSpeed(-HitPwr);
         return true;
     }

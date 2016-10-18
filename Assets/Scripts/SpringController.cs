@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Managers;
 
 public class SpringController : MonoBehaviour {
 
@@ -12,21 +11,15 @@ public class SpringController : MonoBehaviour {
     public float minWidth = 10.0F;
     public float maxWidth = 30.0F;
     public Vector2 exitForce = new Vector2(5000F, 0);
-    public AudioClip SpringLaunchClip;
 
     private PlayerController pc;
     private float bigCompressFactor = 0.5F;
     private float compressOrientation = 1.0F;
     private bool shouldCompress = false;
-    private AudioSource _springAudio;
-    private GameController _gameController;
 
-    // Use this for initialization
-    void Start () {
-        _gameController = GameController.Instance;
+	// Use this for initialization
+	void Start () {
         compressOrientation = compressLeft ? -1.0F : 1.0F;
-        _springAudio = GetComponent<AudioSource>();
-        _springAudio.clip = SpringLaunchClip;
     }
 
     void OnTriggerEnter2D(Collider2D col) {
@@ -65,8 +58,6 @@ public class SpringController : MonoBehaviour {
 
         if (spring.transform.localScale.x < maxWidth)
         {
-            _springAudio.volume = _gameController.GetSFXVolume();
-            _springAudio.Play();
             spring.transform.localScale += cfVector * 10;
 
             spring.transform.position -= (cfVector * 10 * -compressOrientation / 2);

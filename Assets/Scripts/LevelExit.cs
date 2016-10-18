@@ -10,24 +10,19 @@ using Managers;
 /// Level exit will determine the behavior of swiching levels
 /// </summary>
 public class LevelExit : MonoBehaviour {
-    public string nextScene;
-    public AudioClip ExitClip;
+   // public string nextScene;
+
     private bool Playa1IsInDaHouse = false;
     private bool Playa2IsInDaHouse = false;
-    public GameObject completedPanel;
-    public Camera cam;
-    public int currentLevel;
-    private GameController _gameController;
-    private AudioSource _exitAudio;
+	public GameObject completedPanel;
+	public Camera cam;
+	public int currentLevel;
+    private GameController _controller;
 
-    // Use this for initialization
     void Start()
     {
-        _gameController = GameController.Instance;
-        _exitAudio = GetComponent<AudioSource>();
-        _exitAudio.clip = ExitClip;
+        this._controller = GameController.Instance;
     }
-
 
     void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Player") {
@@ -36,12 +31,19 @@ public class LevelExit : MonoBehaviour {
             Playa2IsInDaHouse = true;
         }
         if (Playa1IsInDaHouse && Playa2IsInDaHouse) {
-            _exitAudio.volume = _gameController.GetSFXVolume();
-            _exitAudio.Play();
 			completedPanel.SetActive (true);
 			cam.GetComponent<Blur>().enabled = true;
 			Time.timeScale = 0.0f;
 			updateScores ();
+
+            //make next level enabled in level select
+            if (currentLevel == _controller.LevelsUnlocked)
+            {
+                _controller.LevelsUnlocked = currentLevel+1;
+                Debug.Log(_controller.LevelsUnlocked);
+            }
+            
+
            // GameController controller = GameController.Instance;
             //controller.loadScreenSingle(nextScene);
         }
