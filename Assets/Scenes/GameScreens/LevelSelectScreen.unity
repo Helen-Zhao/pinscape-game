@@ -176,7 +176,7 @@ GameObject:
   - 114: {fileID: 146304590}
   - 114: {fileID: 146304589}
   m_Layer: 5
-  m_Name: Button (5)
+  m_Name: Level6Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -556,7 +556,7 @@ GameObject:
   - 114: {fileID: 266024358}
   - 114: {fileID: 266024357}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Level2Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1657,7 +1657,7 @@ GameObject:
   - 114: {fileID: 1194841410}
   - 114: {fileID: 1194841409}
   m_Layer: 5
-  m_Name: Button (4)
+  m_Name: Level5Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1959,7 +1959,7 @@ GameObject:
   - 114: {fileID: 1264613951}
   - 114: {fileID: 1264613950}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Level3Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2081,7 +2081,7 @@ GameObject:
   - 114: {fileID: 1272110173}
   - 114: {fileID: 1272110172}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Level1Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2203,7 +2203,7 @@ GameObject:
   - 114: {fileID: 1445313968}
   - 114: {fileID: 1445313967}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: Level4Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2545,7 +2545,7 @@ GameObject:
   - 114: {fileID: 1619804569}
   - 114: {fileID: 1619804568}
   m_Layer: 5
-  m_Name: Button (7)
+  m_Name: Level8Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3209,7 +3209,7 @@ GameObject:
   - 114: {fileID: 1910088751}
   - 114: {fileID: 1910088750}
   m_Layer: 5
-  m_Name: Button (6)
+  m_Name: Level7Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
