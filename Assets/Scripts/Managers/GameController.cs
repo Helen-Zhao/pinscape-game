@@ -37,6 +37,20 @@ namespace Managers {
 
             }
         }
+
+        private int _levelsUnlocked = 0;
+        public int LevelsUnlocked
+        {
+           get
+            {
+                return this._levelsUnlocked;
+            }
+            set
+            {
+               
+                this._levelsUnlocked = (value <= TOTAL_NUMBER_OF_LEVELS)? value : TOTAL_NUMBER_OF_LEVELS;
+            }
+        }
         #endregion
 
         #region Feilds
@@ -181,7 +195,10 @@ namespace Managers {
 				this.LoadInitialTokenPersistenceArray();
 			}
 
-		}
+            // Levels
+            LevelsUnlocked = (PlayerPrefs.HasKey("LevelsUnlocked")) ? PlayerPrefs.GetInt("LevelsUnlocked") : 1;
+
+        }
 
         void OnDestroy() {
             PlayerPrefs.SetFloat("MasterVolume", _volume.Master);
@@ -189,7 +206,9 @@ namespace Managers {
             PlayerPrefs.SetFloat("EffectVolume", _volume.Effects);
             PlayerPrefs.SetInt("Tokens", _tokens);
 			PlayerPrefs.SetString ("TokensCollectedAcrossGame", ConvertTokensCollectedToString());
+            PlayerPrefs.SetInt("LevelsUnlocked", LevelsUnlocked);
             PlayerPrefs.Save();
+            
         }
         #endregion
 

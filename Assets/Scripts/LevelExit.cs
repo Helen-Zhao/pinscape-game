@@ -17,6 +17,12 @@ public class LevelExit : MonoBehaviour {
 	public GameObject completedPanel;
 	public Camera cam;
 	public int currentLevel;
+    private GameController _controller;
+
+    void Start()
+    {
+        this._controller = GameController.Instance;
+    }
 
     void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Player") {
@@ -29,6 +35,15 @@ public class LevelExit : MonoBehaviour {
 			cam.GetComponent<Blur>().enabled = true;
 			Time.timeScale = 0.0f;
 			updateScores ();
+
+            //make next level enabled in level select
+            if (currentLevel == _controller.LevelsUnlocked)
+            {
+                _controller.LevelsUnlocked = currentLevel+1;
+                Debug.Log(_controller.LevelsUnlocked);
+            }
+            
+
            // GameController controller = GameController.Instance;
             //controller.loadScreenSingle(nextScene);
         }
