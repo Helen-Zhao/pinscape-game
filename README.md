@@ -27,17 +27,25 @@ A game to be developed using Unity.
 ## Controls
 
 ### Player 1 controls
+
 __UpArrow__ is jump
+
 __LeftArrow__ is left
+
 __RightArrow__ is right
 
 ### Player 2 controls
+
 __W__ is jump
+
 __D__ is right
+
 __A__ is left
 
 ### Global control
+
 __P__ is paws
 
 ### _FOR TUTORIS ONLY_
+
 Tutors can press __L__ to finish levels
