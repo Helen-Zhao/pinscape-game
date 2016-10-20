@@ -3,7 +3,7 @@
 Prototype Repo: https://github.com/Helen-Zhao/softeng-306-p2
 
 Instructions for executables:  
-	1. (Preferred method) [Download](https://drive.google.com/open?id=0B3QL-c25-1uyQjU2emZjYTNralE), extract and execute the .exe, select the 1080x1920 option (if present) and play.  
+	1. (Preferred method) [Download](https://drive.google.com/open?id=0B3QL-c25-1uyQjU2emZjYTNralE), extract both files in the zip and execute the .exe, select the 1080x1920 option (if present) and play.  
 
 
 ## Team Members
