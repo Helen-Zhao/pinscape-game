@@ -101,8 +101,8 @@ GameObject:
   - 33: {fileID: 520542412}
   - 65: {fileID: 520542411}
   - 23: {fileID: 520542410}
-  - 82: {fileID: 520542409}
   - 114: {fileID: 520542408}
+  - 82: {fileID: 520542409}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
