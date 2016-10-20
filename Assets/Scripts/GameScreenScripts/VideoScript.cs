@@ -4,15 +4,16 @@ using Managers;
 
 public class VideoScript : MonoBehaviour
 {
+    public MovieTexture _video;
 
     private AudioSource _videoAudio;
-    private MovieTexture _video;
+    //private MovieTexture _video;
     private const string AVATAR_SELECT_SCREEN = "AvatarSelectScreen";
 
     // Use this for initialization
     void Start()
     {
-        _video = ((MovieTexture)GetComponent<Renderer>().material.mainTexture);
+        //_video = ((MovieTexture)GetComponent<Renderer>().material.mainTexture);
         _video.Play();
         _videoAudio = GetComponent<AudioSource>();
         _videoAudio.Play();
